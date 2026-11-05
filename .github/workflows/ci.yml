@@ -1,0 +1,17 @@
+name : Vehicle Rental System
+
+on : 
+ push:
+  branch :
+    main
+pull_request :
+    main 
+
+jobs:
+  validation :
+
+  name : Install dependencies
+  run : python requirements.txt
+
+  name : Automation workflow
+  run : python selenium_login.py
